@@ -6,21 +6,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="index.js"></script>
   <title>Document</title>
 </head>
 <body>
-  <div class="main">
-    <div class="main__header">
-      <h1>견생테스트</h1>
+  <div class="box">
+    <div class="box__box">
+      <div class="main">
+        <div class="main__header">
+          <h1>견생테스트</h1>
+        </div>
+        <div class="main__title">
+          <img src="./img/main__title.png" alt="main__title">
+        </div>
+        <div class="main__button">
+          <input id="name" class="main__button--name" type="text" placeholder="이름을 입력해주세요" maxlength="14">
+          <button class="main__button--start" onclick="start()" type="button">견생테스트 시작</button>
+        </div>
+      </div>
+      <div class="questions">
+        <div id="question1" class="question">Q1: 손님
+          <button class="question__button" onclick="question(1, 0, 1)" type="button">집으로 들어가 숨기</button>
+          <button class="question__button" onclick="question(1, 0, 0)" type="button">발발거리며 맞이</button>
+        </div>
+        <div id="question2" class="question">Q2: 친구
+          <button class="question__button" onclick="question(2, 0, 1)" type="button">천천히 탐색</button>
+          <button class="question__button" onclick="question(2, 0, 0)" type="button">이리저리 뛰기</button>
+        </div>
+        <div id="question3" class="question">Q3: 휴식
+          <button class="question__button" onclick="question(3, 0, 1)" type="button">주인옆에서 얌전히</button>
+          <button class="question__button" onclick="question(3, 0, 0)" type="button">장난감들고 활발히</button>
+        </div>
+        <div id="question4" class="question">Q4: 산책
+          <button class="question__button" onclick="question(4, 1, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(4, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question5" class="question">Q5: 산책
+          <button class="question__button" onclick="question(5, 1, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(5, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question6" class="question">Q6: 산책
+          <button class="question__button" onclick="question(6, 1, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(6, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question7" class="question">Q7: 산책
+          <button class="question__button" onclick="question(7, 2, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(7, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question8" class="question">Q8: 산책
+          <button class="question__button" onclick="question(8, 2, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(8, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question9" class="question">Q9: 산책
+          <button class="question__button" onclick="question(9, 2, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(9, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question10" class="question">Q10: 산책
+          <button class="question__button" onclick="question(10, 3, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(10, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question11" class="question">Q11: 산책
+          <button class="question__button" onclick="question(11, 3, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(11, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+        <div id="question12" class="question">Q12: 산책
+          <button class="question__button" onclick="question(12, 3, 1)" type="button">킁킁거리며 냄새</button>
+          <button class="question__button" onclick="question(12, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        </div>
+      </div>
+      <div class="picture">
+        <div id="picture__test" class="picture__test">asdfasd</div>
+      </div>
+      <div class="result">
+
+      </div>
     </div>
-    <div class="main__title">
-      <img src="./img/main__title.png" alt="main__title">
-    </div>
-    <div class="main__button">
-      <input class="main__button--name" type="text" placeholder="이름을 입력해주세요" maxlength="14">
-      <button class="main__button--start" type="button">견생테스트 시작</button>
-    </div>
-    <div class="main__logo">
+    <div class="logo">
       <img src="./img/main__logo.png" alt="main__logo">
     </div>
   </div>
