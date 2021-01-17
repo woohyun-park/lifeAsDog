@@ -536,7 +536,7 @@ mark {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
-  bottom: 100px;
+  bottom: 5%;
   left: 50%; }
   .box__logo img {
     display: block;
