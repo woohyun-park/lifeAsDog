@@ -562,7 +562,7 @@ mark {
     transform: translateX(-50%); }
   .box__logo:hover {
     transform: scale(1.1);
-    left: 50.5%; }
+    left: 50.6%; }
 
 @media (max-width: 416px) {
   body {
