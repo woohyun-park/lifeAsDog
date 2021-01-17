@@ -518,11 +518,12 @@ mark {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%); }
+  margin-top: 100px; }
   .logo img {
     display: block;
     margin-left: auto;
     margin-right: auto; }
+
+@media (max-width: 416px) {
+  body {
+    width: 415px; } }

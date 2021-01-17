@@ -367,11 +367,14 @@ mark{
 
 .logo{
   @include block-style;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform:translate(-50%);
+  margin-top: 100px;
   img{
     @include block-style;
+  }
+}
+
+@media (max-width : 416px){
+  body{
+    width: 415px;
   }
 }
