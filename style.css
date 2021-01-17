@@ -15,17 +15,17 @@ mark {
   color: white;
   background-color: #cfb2b4;
   padding: 5px;
-  margin-top: 150px; }
+  margin-top: 50px; }
 
 .box {
   display: block;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 600px;
+  height: 500px;
   width: 400px;
-  justify-content: center;
-  align-items: center; }
+  margin-top: 100px;
+  justify-content: center; }
 
 .main__title {
   display: block;
@@ -129,7 +129,8 @@ mark {
     outline: none; }
 
 .question {
-  display: none; }
+  display: none;
+  margin-top: 30px; }
 
 .question__page {
   display: block;
@@ -516,8 +517,7 @@ mark {
 .logo {
   display: block;
   margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px; }
+  margin-right: auto; }
   .logo img {
     display: block;
     margin-left: auto;
