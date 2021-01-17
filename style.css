@@ -25,8 +25,7 @@ mark {
   height: 600px;
   width: 400px;
   justify-content: center;
-  align-items: center;
-  margin-top: 100px; }
+  align-items: center; }
 
 .main__title {
   display: block;
