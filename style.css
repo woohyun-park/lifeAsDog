@@ -525,7 +525,8 @@ mark {
   margin-left: auto;
   margin-right: auto;
   display: none;
-  margin-top: 30px; }
+  margin-top: 30px;
+  padding-bottom: 30px; }
   .result__logo img {
     display: block;
     margin-left: auto;
