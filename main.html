@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- <script type="text/javascript" src="./lib/question.js"></script> -->
   <script type="text/javascript" src="./lib/picture.js"></script>
-  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
   <title>Document</title>
 </head>
@@ -25,82 +26,154 @@
         </div>
         <div class="main__button">
           <input id="name" class="main__button--name" type="text" placeholder="이름을 입력해주세요" maxlength="14">
-          <button class="main__button--start" onclick="start()" type="button">견생테스트 시작</button>
+          <div class="main__container">
+            <a class="main__button--start" onclick="start()">
+              견생테스트 시작
+            </a>
+          </div>
         </div>
       </div>
       <div class="questions">
-        <div id="questionSex" class="question">Q1: 성별
-          <button class="question__button" onclick="questionSex(0)" type="button">남자</button>
-          <button class="question__button" onclick="questionSex(1)" type="button">여자</button>
+        <div id="questionSex" class="question">
+          <div class="question__title"><mark>당신의 성별은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="questionSex(0)">
+              남자
+            </a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="questionSex(1)">
+              여자
+            </a>
+          </div>
         </div>
-        <div id="question1" class="question">Q1: 손님
-          <button class="question__button" onclick="question(1, 0, 1)" type="button">집으로 들어가 숨기</button>
-          <button class="question__button" onclick="question(1, 0, 0)" type="button">발발거리며 맞이</button>
+        <div id="question1" class="question">
+          <div class="question__title"><mark>낯선 손님이 집에 놀러왔다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(1, 0, 1)">일단 집으로<br>들어가 숨는다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(1, 0, 0)">현관문까지 나가서<br>발발거리며 맞이한다</a>
+          </div>
         </div>
-        <div id="question2" class="question">Q2: 친구
-          <button class="question__button" onclick="question(2, 0, 1)" type="button">천천히 탐색</button>
-          <button class="question__button" onclick="question(2, 0, 0)" type="button">이리저리 뛰기</button>
+        <div id="question2" class="question">
+          <div class="question__title"><mark>산책을 하다가 갱얼쥐 친구를 만났다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(2, 0, 1)">킁킁거리며 천천히<br>탐색전을 벌인다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(2, 0, 0)">폴짝폴짝 뛰면서<br>놀자고 한다</a>
+          </div>
         </div>
-        <div id="question3" class="question">Q3: 휴식
-          <button class="question__button" onclick="question(3, 0, 1)" type="button">주인옆에서 얌전히</button>
-          <button class="question__button" onclick="question(3, 0, 0)" type="button">장난감들고 활발히</button>
+        <div id="question3" class="question">
+          <div class="question__title"><mark>주인이 조용히 자기만의 시간을 즐기고 있다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(3, 0, 1)">주인 옆에 벌러덩 누워<br>나만의 시간을 즐긴다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(3, 0, 0)">장난감을 물고 초롱초롱하게<br>주인을 쳐다본다</a>
+          </div>
         </div>
-        <div id="question4" class="question">Q4: 산책
-          <button class="question__button" onclick="question(4, 1, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(4, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question4" class="question">
+          <div class="question__title"><mark>나른한 오후를 지나고 나가는 산책.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(4, 1, 1)">상쾌한 공기를 즐기며<br>바깥향기를 음미한다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(4, 1, 0)">신나서 뛰어다니며<br>주인을 끌고다닌다</a>
+          </div>
         </div>
-        <div id="question5" class="question">Q5: 산책
-          <button class="question__button" onclick="question(5, 1, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(5, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question5" class="question">
+          <div class="question__title"><mark>차를 타고 한참을 가서 낯선 장소에 도착했다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(5, 1, 1)">무서워서 한발한발<br>조심히 내딛는다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(5, 1, 0)">용감하게 여기저기<br>구역표시를 한다</a>
+          </div>
         </div>
-        <div id="question6" class="question">Q6: 산책
-          <button class="question__button" onclick="question(6, 1, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(6, 1, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question6" class="question">
+          <div class="question__title"><mark>주인이 한번도 먹어보지 못한 간식을 준다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(6, 1, 1)">집으로 가져와서 먹어도<br>괜찮은지 확인한다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(6, 1, 0)">일단 먹고나서 생각한다</a>
+          </div>
         </div>
-        <div id="question7" class="question">Q7: 산책
-          <button class="question__button" onclick="question(7, 2, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(7, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question7" class="question">
+          <div class="question__title"><mark>주인이 간식도 없이 앉으라고 한다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(7, 2, 1)">간식이 없으면<br>눈길도 주지 않는다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(7, 2, 0)">주인이 앉으라면<br>일단 앉고본다</a>
+          </div>
         </div>
-        <div id="question8" class="question">Q8: 산책
-          <button class="question__button" onclick="question(8, 2, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(8, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question8" class="question">
+          <div class="question__title"><mark>주인이 별것 아닌것 같은 일로 혼을 낸다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(8, 2, 1)">내가 맞다면서<br>왈왈 짖는다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(8, 2, 0)">일단 쭈구리, 최대한<br>불쌍한 표정을 짓는다</a>
+          </div>
         </div>
-        <div id="question9" class="question">Q9: 산책
-          <button class="question__button" onclick="question(9, 2, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(9, 2, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question9" class="question">
+          <div class="question__title"><mark>주인이 어제 고백했다 차였다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(9, 2, 1)">조용히 주인옆에서<br>괜찮다고 위로한다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(9, 2, 0)">같이 낑낑거리며<br>슬픔을 공유한다</a>
+          </div>
         </div>
-        <div id="question10" class="question">Q10: 산책
-          <button class="question__button" onclick="question(10, 3, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(10, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question10" class="question">
+          <div class="question__title"><mark>나른한 주말 아침, 주인이 일어나질 않는다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(10, 3, 1)">주인 얼굴을 핥으며<br>일어나라고한다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(10, 3, 0)">주말인데 나도 좀 더 잔다</a>
+          </div>
         </div>
-        <div id="question11" class="question">Q11: 산책
-          <button class="question__button" onclick="question(11, 3, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(11, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question11" class="question">
+          <div class="question__title"><mark>배변활동은 강아지에게 필수적이다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(11, 3, 1)">매일 정해진 시간에 산책가 배변한다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(11, 3, 0)">아무때나 마려울때 패드에 배변한다</a>
+          </div>
         </div>
-        <div id="question12" class="question">Q12: 산책
-          <button class="question__button" onclick="question(12, 3, 1)" type="button">킁킁거리며 냄새</button>
-          <button class="question__button" onclick="question(12, 3, 0)" type="button">뛰어다니며 여기저기</button>
+        <div id="question12" class="question">
+          <div class="question__title"><mark>주인과 신나게 한바탕 뛰놀았다.<br>당신은?</mark></div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(12, 3, 1)">흩어져있는 장난감을 내집으로 가져온다</a>
+          </div>
+          <div class="question__container">
+            <a class="question__button" onclick="question(12, 3, 0)">그냥 흩어져 있는대로 놔둔다</a>
+          </div>
         </div>
       </div>
       <div class="picture">
-        <button type="button" onclick="init()">Start</button>
+        <div class="question__title"><mark>당신의 사진은?</mark></div>
         <div class="file-upload">
-          <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-
           <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-            <div class="drag-text">
-              <h3>Drag and drop a file or select add Image</h3>
-            </div>
           </div>
           <div class="file-upload-content">
-            <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+            <img class="file-upload-image" id="face-image" src="#" alt="your image"/>
             <div class="image-title-wrap">
             </div>
           </div>
         </div>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
+        <div class="picture__container">
+          <a class="picture__button" type="button" onclick="$('.file-upload-input').trigger( 'click' )">사진 첨부</a>
+        </div>
+        <div class="picture__container">
+          <a class="picture__button" onclick="init()">결과 보기</a>
+        </div>
       </div>
       <div class="process">
         processing...
@@ -110,11 +183,19 @@
       </div>
     </div>
     <div class="logo">
-      <img src="./img/main__logo.png" alt="main__logo">
+      <a href="https://iamdooddi.tistory.com/" target="_blank"><img src="./img/main__logo.png" alt="main__logo"></a>
     </div>
   </div>
 </body>
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+<!-- Copyright (c) 2021 by ifeiii (https://codepen.io/ifeiii/pen/ZOPowJ)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

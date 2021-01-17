@@ -1,0 +1,101 @@
+<section id="beforeSolution">
+
+  <div class="btn">
+    <div class="container">
+      <a class="button">
+        View more
+      </a>
+    </div>
+  </div>
+
+</section>
+<style>
+  .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+    margin: 0 auto;
+    width: 150px;
+
+
+  }
+
+  .button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #0099FF;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: .2s;
+    transition: .2s;
+    margin: 0 auto;
+
+    border-radius: 20px;
+  }
+  .button:after {
+    position: absolute;
+    -webkit-transition: .2s;
+    transition: .2s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #0099FF;
+    height: 120%;
+    left: -10%;
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+    z-index: -1;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .button:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  .button:hover:nth-of-type(1) {
+    color: #5bcaff;
+  }
+  .button:hover:nth-of-type(1):after {
+    left: -10%;
+    width: 120%;
+  }
+
+  #beforeSolution a:hover {
+    color: #fff;
+  }
+
+  #onboardSolution a:hover {
+    color: #fff;
+  }
+  #afterSolution a:hover {
+    color: #fff;
+  }
+</style>
+<!--inspired by
+https://codepen.io/thejamespower/pen/OVNYLL
+-->
