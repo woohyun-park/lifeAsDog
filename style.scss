@@ -92,7 +92,7 @@ $text-color-reverse: white;
 body{
   @include block-style;
 
-  width: 800px;
+  width: 100%;
 
   background-color: $bg-color;
   font-family: 'Nanum Gothic', sans-serif;
@@ -237,6 +237,18 @@ mark{
   display:none;
 }
 
+.picture__upload--text{
+  @include block-style;
+  text-align: center;
+  line-height: 300px;
+  color: white;
+  font-size: 20px;
+  span{
+    background-color: #d7c5b9;
+    padding: 5px;
+  }
+}
+
 .picture__container {
   @include container-style;
   margin-top: 10px;
@@ -378,6 +390,10 @@ mark{
   display: none;
   margin-top: 30px;
   padding-bottom: 30px;
+  transition: .5s;
+  &:hover{
+    transform: scale(1.1);
+  }
   img{
     @include block-style;
   }
@@ -388,9 +404,14 @@ mark{
   position: absolute;
   bottom:5%;
   left: 50%;
+  transition: .5s;
   img{
     @include block-style;
     transform: translateX(-50%);
+  }
+  &:hover{
+    transform: scale(1.1);
+    left:50.5%;
   }
 }
 
