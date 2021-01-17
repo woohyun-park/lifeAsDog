@@ -75,8 +75,8 @@ mark {
   text-align: center;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   margin: 0 auto;
   border-radius: 25px;
   color: #736e72;
@@ -86,8 +86,8 @@ mark {
   font-weight: 700; }
   .main__button--start:after {
     position: absolute;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: .5s;
+    transition: .5s;
     content: '';
     width: 0;
     left: 50%;
@@ -181,8 +181,8 @@ mark {
   text-align: center;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   margin: 0 auto;
   border-radius: 25px;
   color: #736e72;
@@ -197,8 +197,8 @@ mark {
   text-align: center; }
   .question__button:after {
     position: absolute;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: .5s;
+    transition: .5s;
     content: '';
     width: 0;
     left: 50%;
@@ -286,8 +286,8 @@ mark {
   text-align: center;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   margin: 0 auto;
   border-radius: 25px;
   color: #736e72;
@@ -299,8 +299,8 @@ mark {
   height: 20px; }
   .picture__button:after {
     position: absolute;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: .5s;
+    transition: .5s;
     content: '';
     width: 0;
     left: 50%;
@@ -484,8 +484,8 @@ mark {
   text-align: center;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   margin: 0 auto;
   border-radius: 25px;
   color: #736e72;
@@ -495,8 +495,8 @@ mark {
   font-weight: 700; }
   .result__button:after {
     position: absolute;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: .5s;
+    transition: .5s;
     content: '';
     width: 0;
     left: 50%;

@@ -23,8 +23,8 @@ $text-color-reverse: white;
 
   position: relative;
   overflow: hidden;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   margin: 0 auto;
 
   border-radius: 25px;
@@ -35,8 +35,8 @@ $text-color-reverse: white;
   font-weight: 700;
   &:after{
     position: absolute;
-    -webkit-transition: .2s;
-    transition: .2s;
+    -webkit-transition: .5s;
+    transition: .5s;
     content: '';
     width: 0;
     left: 50%;
