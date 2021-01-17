@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
+$bg-color: #eae7e2; //light beige
+$base-color: #d7c5b9; //beige
+$point-color: #cfb2b4; //deep beige
+$text-color: #736e72; //dark beige
+$text-color-reverse: white;
+
 @mixin block-style{
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 @mixin button-style{
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
@@ -13,7 +18,7 @@
           flex: 1 1 auto;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #d7c5b9;
+  border: 1px solid $base-color;
   text-align: center;
 
   position: relative;
@@ -23,7 +28,7 @@
   margin: 0 auto;
 
   border-radius: 25px;
-  color: #736e72;
+  color: $text-color;
   height: 30px;
   line-height: 30px;
   font-size:20px;
@@ -37,7 +42,7 @@
     left: 50%;
     bottom: 0;
     height: 3px;
-    background: #d7c5b9;
+    background: $base-color;
     height: 120%;
     left: -10%;
     -webkit-transform: skewX(15deg);
@@ -85,14 +90,12 @@
 }
 
 body{
-  font-family: 'Nanum Gothic', sans-serif;
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
+  @include block-style;
+
   width: 800px;
-  background-color: #eae7e2;
-  text-shadow: 2px 2px 5px #d7c5b9;
-  color: white;
+
+  background-color: $bg-color;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 h1{
@@ -100,25 +103,23 @@ h1{
 }
 
 mark{
-  background-color: #cfb2b4;
-  color: white;
-  padding: 5px;
   font-size: 20px;
+  color: $text-color-reverse;
+  background-color: $point-color;
+
+  padding: 5px;
   margin-top: 150px;
 }
 
 .box{
   @include block-style;
-  width: 415px;
-}
-
-.box__box{
+  display: flex;
   height: 600px;
-  margin-top: 100px;
-}
+  width: 400px;
 
-.main{
-  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .main__title{
@@ -129,9 +130,16 @@ mark{
   }
 }
 
+.main__container {
+  @include container-style;
+}
+
 .main__button{
   @include block-style;
-  margin-bottom: 200px;
+}
+
+.main__button--start {
+  @include button-style;
 }
 
 .main__button--name{
@@ -146,26 +154,21 @@ mark{
   background-color: #ffffff;
   font-size: 20px;
   text-align: center;
+  &:focus{
+    outline:none;
+  }
 }
-
-// .main__button--start{
-//   @include block-style;
-//   border: none;
-//   border-radius: 25px;
-//   background-color: #d7c5b9;
-//   width: 300px;
-//   height: 50px;
-//   color: white;
-//   font-size: 20px;
-//   transition: 0.3s;
-//   &:hover{
-//     transform: scale(1.08);
-//   }
-// }
 
 .question{
   display: none;
-  text-align: center;
+}
+
+.question__page{
+  display: block;
+  text-align: right;
+  position: relative;
+  top: -10px;
+  color: $text-color;
 }
 
 .question__title{
@@ -174,181 +177,11 @@ mark{
   text-align: center;
 }
 
-// .question__button{
-//   @include block-style;
-//   font-family: 'Nanum Gothic', sans-serif;
-//   width: 315px;
-//   height: 80px;
-//   padding-left: 50px;
-//   padding-right: 50px;
-  // margin-top: 50px;
-  // margin-bottom: -15px;
-//   border: none;
-//   border-radius: 50px;
-//   background-color: #d7c5b9;
-//   color: white;
-//   font-size: 20px;
-// }
-
-.picture__test{
-  display:none;
-}
-
-.logo{
-  @include block-style;
-  margin-bottom: 100px;
-  img{
-    @include block-style;
-  }
-}
-
-.picture{
-  display:none;
-}
-
-.process{
-  display:none;
-}
-
-
-
-
-
-HTML CSS JSResult Skip Results Iframe
-body {
-  font-family: sans-serif;
-  background-color: #eeeeee;
-}
-
-.file-upload {
-  background-color: #ffffff;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-.file-upload-btn {
-  width: 100%;
-  margin: 0;
-  color: #fff;
-  background: #1FB264;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  border-bottom: 4px solid #15824B;
-  transition: all .2s ease;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.file-upload-btn:hover {
-  background: #1AA059;
-  color: #ffffff;
-  transition: all .2s ease;
-  cursor: pointer;
-}
-
-.file-upload-btn:active {
-  border: 0;
-  transition: all .2s ease;
-}
-
-.file-upload-content {
-  display: none;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 300px;
-}
-
-.file-upload-input {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  outline: none;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.image-upload-wrap {
-  display:none;
-  margin-top: 20px;
-  border: 4px dashed #1FB264;
-  position: relative;
-}
-
-.image-dropping,
-.image-upload-wrap:hover {
-  background-color: #1FB264;
-  border: 4px dashed #ffffff;
-}
-
-.drag-text {
-  text-align: center;
-}
-
-.drag-text h3 {
-  font-weight: 100;
-  text-transform: uppercase;
-  color: #15824B;
-  padding: 60px 0;
-}
-
-.file-upload-image {
-  max-height: 280px;
-  max-width: 280px;
-  margin: auto;
-  vertical-align: middle;
-}
-
-.remove-image {
-  width: 200px;
-  margin: 0;
-  color: #fff;
-  background: #cd4535;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  border-bottom: 4px solid #b02818;
-  transition: all .2s ease;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.remove-image:hover {
-  background: #c13b2a;
-  color: #ffffff;
-  transition: all .2s ease;
-  cursor: pointer;
-}
-
-.remove-image:active {
-  border: 0;
-  transition: all .2s ease;
-}
-
-.main__container {
-  @include container-style;
-}
-
-.main__button--start {
-  @include button-style;
-}
-
 .question__container{
   @include container-style;
-  margin-top: 50px;
-  margin-bottom: -15px;
 
   display: table;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto -15px auto;
 }
 
 .question__button{
@@ -361,33 +194,70 @@ body {
   text-align: center;
 }
 
+.picture{
+  display:none;
+}
+
+.picture__title{
+  @extend .question__title;
+}
+
+.picture__upload {
+  background-color: #ffffff;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+.picture__upload--content {
+  display: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 300px;
+  img{
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.picture__upload--image {
+  object-fit: cover;
+  margin: auto;
+  vertical-align: middle;
+  border-radius: 30px;
+}
+
+
+.picture__upload--wrap {
+  display:none;
+}
+
 .picture__container {
   @include container-style;
   margin-top: 40px;
   margin-bottom: -25px;
+  width: 200px;
 }
 
 .picture__button {
   @include button-style;
 }
 
+.process{
+  display:none;
+}
 
-
-
-
-
-
-
-.loading {
+.process__loading {
   width: 100px;
   height: 100px;
-  margin-top: 130px;
+  margin-top: -100px;
   margin-left: auto;
   margin-right: auto;
   background: none;
 }
 
-.loading > div {
+.process__loading > div {
   width: 60px;
   height: 60px;
   position: relative;
@@ -397,13 +267,12 @@ body {
   margin-top: -30px;
 }
 
-
-.loading > div > div {
+.process__loading > div > div {
   content: '';
   position: absolute;
   width: 16px;
   height: 16px;
-  background: #d7c5b9;
+  background: $base-color;
   top: 10px;
   left: 10px;
   transform-origin: 20px 20px;
@@ -411,14 +280,14 @@ body {
   animation: spin-a 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-.loading > div > .c2 {
+.process__loading > div > .process__object--2 {
   top: 10px;
   left: auto;
   right: 10px;
   transform-origin: -4px 20px;
   animation: spin-b 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
-.loading > div > .c3 {
+.process__loading > div > .process__object--3 {
   top: auto;
   left: auto;
   right: 10px;
@@ -426,7 +295,7 @@ body {
   transform-origin: -4px -4px;
   animation: spin-c 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
-.loading > div > .c4 {
+.process__loading > div > .process__object--4 {
   top: auto;
   bottom: 10px;
   transform-origin: 20px -4px;
@@ -463,16 +332,46 @@ body {
   100% { transform: rotate(360deg); }
 }
 
+.result{
+  display: none;
+}
 
-.loading > span {
-  width: 100px;
-  height: 30px;
-  position: relative;
+.result__title{
+  @extend .question__title;
+}
+
+.result__container{
+  @include container-style;
+  width: 200px;
+}
+
+.result__image{
+  @include block-style;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.result__textbox{
+  @include block-style;
+  margin-bottom: 30px;
+  width: 301px;
+}
+
+.result__button{
+  @include button-style;
+}
+
+.logo{
+  @include block-style;
+  position: absolute;
+  bottom: 10%;
   left: 50%;
-  margin-left: -50px;
-  top: 50%;
-  margin-top: -150px;
-  color: #ff8c00;
-  font-size: 12px;
-  text-align: center;
+  transform:translate(-50%);
+  img{
+    @include block-style;
+  }
 }
