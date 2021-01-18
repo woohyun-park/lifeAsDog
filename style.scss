@@ -415,6 +415,16 @@ mark{
   }
 }
 
+.at-share-btn-elements{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.at-share-btn-elements a:focus{
+  border: none;
+  outline: none;
+}
+
 @media (max-width : 416px){
   body{
     width: 415px;
