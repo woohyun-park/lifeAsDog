@@ -470,11 +470,17 @@ mark{
   }
 }
 
+.ad{
+  display:block;
+}
+
+//for addthis
 .at-share-btn-elements{
   text-align: center;
   margin-bottom: 20px;
 }
 
+//for addthis
 .at-share-btn-elements a:focus{
   border: none;
   outline: none;
