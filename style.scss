@@ -248,6 +248,14 @@ mark{
   }
 }
 
+.picture__upload--alert{
+  position:relative;
+  font-size: 0.8em;
+  text-align: center;
+  top: -3em;
+  color: $text-color;
+}
+
 .picture__container {
   @include container-style;
   margin-top: 10px;
@@ -443,8 +451,6 @@ mark{
   @include block-style;
   display: none;
   margin-top: 30px;
-  margin-bottom: 60px;
-  padding-bottom: 30px;
   transition: .5s;
   &:hover{
     transform: scale(1.1);

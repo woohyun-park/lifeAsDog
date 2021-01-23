@@ -263,6 +263,13 @@ mark {
     background-color: #d7c5b9;
     padding: 5px; }
 
+.picture__upload--alert {
+  position: relative;
+  font-size: 0.8em;
+  text-align: center;
+  top: -3em;
+  color: #736e72; }
+
 .picture__container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -587,8 +594,6 @@ mark {
   margin-right: auto;
   display: none;
   margin-top: 30px;
-  margin-bottom: 60px;
-  padding-bottom: 30px;
   transition: .5s; }
   .result__logo:hover {
     transform: scale(1.1); }
