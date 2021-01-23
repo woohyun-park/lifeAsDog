@@ -609,7 +609,7 @@ mark {
     transform: scale(1.1); }
 
 .ad {
-  position: absolute;
+  position: fixed;
   bottom: 0; }
 
 .at-share-btn-elements {
