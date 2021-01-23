@@ -3,7 +3,7 @@
 <head>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-70R9RF4RBM"></script>
-  <script>
+  <script async>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -13,33 +13,28 @@
 
     gtag('config', 'G-70R9RF4RBM');
   </script>
-
+  <!-- Teachable Machine -->
+  <script async src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
   <!-- Addthis (SNS) -->
-  <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6004f93c009e68ee"></script> -->
+  <script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6004f93c009e68ee"></script>
+
+  <!-- JQuery -->
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="./lib/index.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- Favicon / Meta Data -->
   <link rel="icon" href="./img/favicon.ico">
   <link rel="shortcut icon" href="./img/favicon.ico">
   <meta property="og:image" content="./img/kakao.png">
   <meta property="og:title" content="견생테스트: 나는 어떤 강아지일까?">
   <meta property="og:description" content="MBTI와 얼굴로 알아보는 견생테스트">
-
-  <!-- CSS / JS -->
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="./lib/index.js"></script>
-
-  <!-- JQuery / Teachable Machine -->
-  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-
   <title>견생테스트: 나는 어떤 강아지일까?</title>
 </head>
-
 <body>
   <div class="box">
     <div class="main">
@@ -245,7 +240,7 @@
           <div class="result__image--text"></div>
         </div>
       </div>
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <!-- Addthis (SNS) -->
       <div class="addthis_inline_share_toolbox"></div>
       <div class="result__container">
         <a class="result__button" type="button" onclick="setTimeout(function(){location.reload()}, 300)">다시하기</a>
@@ -254,15 +249,14 @@
         <a href="https://iamdooddi.tistory.com/" target="_blank"><img src="./img/main__logo.png" alt="main__logo"></a>
       </div>
     </div>
-    <!-- <div class="box__logo">
-      <a href="https://iamdooddi.tistory.com/" target="_blank"><img src="./img/main__logo.png" alt="main__logo"></a>
-    </div> -->
+    <!-- Kakao Adfit -->
     <div class="ad">
       <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-LFEtM2G4QPiXW0Op" data-ad-width="320" data-ad-height="50"></ins>
-      <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+      <script async type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js"></script>
     </div>
   </div>
 </body>
+
 <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
