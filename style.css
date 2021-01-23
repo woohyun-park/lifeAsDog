@@ -588,6 +588,7 @@ mark {
   margin-right: auto;
   display: none;
   margin-top: 30px;
+  margin-bottom: 100px;
   padding-bottom: 30px;
   transition: .5s; }
   .result__logo:hover {
