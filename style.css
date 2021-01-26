@@ -491,7 +491,11 @@ mark {
   height: 300px;
   border-radius: 30px;
   margin-top: 30px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .result__image img {
+    width: 100%;
+    height: 100%; }
 
 .result__compare {
   display: flex;
@@ -510,12 +514,18 @@ mark {
   height: 125px;
   border-radius: 15px;
   margin-top: 5px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: hidden; }
+  .result__image--small img {
+    width: 100%;
+    height: 100%; }
 
 .result__image--text {
   display: block;
-  margin-bottom: 25x;
-  color: #736e72; }
+  margin-bottom: 25px;
+  color: #736e72;
+  text-align: center;
+  line-height: 1.5em; }
 
 .result__textbox {
   display: flex;

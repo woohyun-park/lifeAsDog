@@ -92,7 +92,8 @@ $text-color-reverse: white;
 body{
   @include block-style;
 
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 
   background-color: $bg-color;
   font-family: 'Nanum Gothic', sans-serif;
@@ -385,6 +386,11 @@ mark{
   border-radius: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
+  overflow: hidden;
+  & img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .result__compare{
@@ -407,12 +413,19 @@ mark{
   border-radius: 15px;
   margin-top: 5px;
   margin-bottom: 10px;
+  overflow: hidden;
+  & img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .result__image--text{
   display:block;
-  margin-bottom: 25x;
+  margin-bottom: 25px;
   color: $text-color;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 .result__textbox{
