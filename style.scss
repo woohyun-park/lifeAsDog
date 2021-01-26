@@ -395,7 +395,6 @@ mark{
 .result__compare{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 35px;
 }
 
 .result__compare--box{
@@ -453,6 +452,12 @@ mark{
   font-size: 50px;
   margin-top: 5px;
   margin-bottom: 25px;
+}
+
+.result__alert{
+  font-size: .5em;
+  text-align: center;
+  margin-bottom: 8em;
 }
 
 .result__button{
