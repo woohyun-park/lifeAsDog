@@ -553,7 +553,8 @@ mark {
 .result__alert {
   font-size: .5em;
   text-align: center;
-  margin-bottom: 8em; }
+  margin-bottom: 8em;
+  color: #736e72; }
 
 .result__button {
   -webkit-box-flex: 1;
