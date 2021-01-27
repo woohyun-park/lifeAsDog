@@ -555,6 +555,8 @@ mark {
   text-align: center;
   margin-bottom: 8em;
   color: #736e72; }
+  .result__alert > a:link, .result__alert > a:visited {
+    color: #736e72; }
 
 .result__button {
   -webkit-box-flex: 1;

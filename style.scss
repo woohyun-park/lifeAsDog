@@ -459,6 +459,9 @@ mark{
   text-align: center;
   margin-bottom: 8em;
   color: $text-color;
+  &>a:link, &>a:visited{
+    color: $text-color;
+  }
 }
 
 .result__button{
