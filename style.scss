@@ -128,10 +128,6 @@ mark{
   }
 }
 
-.main__container {
-  @include container-style;
-}
-
 .main__button{
   @include block-style;
 }
@@ -155,6 +151,10 @@ mark{
   &:focus{
     outline:none;
   }
+}
+
+.main__container {
+  @include container-style;
 }
 
 .question{
@@ -213,6 +213,10 @@ mark{
   margin-bottom: 30px;
 }
 
+.picture__upload--wrap {
+  display:none;
+}
+
 .picture__upload--content {
   display: none;
   text-align: center;
@@ -229,11 +233,6 @@ mark{
   object-fit: cover;
   vertical-align: middle;
   border-radius: 30px;
-}
-
-
-.picture__upload--wrap {
-  display:none;
 }
 
 .picture__upload--text{
@@ -363,6 +362,15 @@ mark{
   margin-top: -50px;
 }
 
+.result__textbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 301px;
+}
+
 .result__title{
   text-align: center;
   font-size: 20px;
@@ -370,11 +378,6 @@ mark{
   background-color: $base-color;
   color:white;
   padding: 3px;
-}
-
-.result__container{
-  @include container-style;
-  width: 200px;
 }
 
 .result__image{
@@ -390,17 +393,6 @@ mark{
     width: 100%;
     height: 100%;
   }
-}
-
-.result__compare{
-  display: flex;
-  justify-content: space-around;
-}
-
-.result__compare--box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .result__image--small{
@@ -426,15 +418,6 @@ mark{
   line-height: 1.5em;
 }
 
-.result__textbox{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  width: 301px;
-}
-
 .result__text{
   color: $text-color;
   font-size: 17px;
@@ -454,6 +437,17 @@ mark{
   margin-bottom: 25px;
 }
 
+.result__compare{
+  display: flex;
+  justify-content: space-around;
+}
+
+.result__compare--box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .result__alert{
   font-size: .5em;
   text-align: center;
@@ -462,6 +456,11 @@ mark{
   &>a:link, &>a:visited{
     color: $text-color;
   }
+}
+
+.result__container{
+  @include container-style;
+  width: 200px;
 }
 
 .result__button{
@@ -478,17 +477,6 @@ mark{
   }
   img{
     @include block-style;
-  }
-}
-
-.box__logo{
-  @include block-style;
-  position: absolute;
-  bottom:5%;
-  right: 5%;
-  transition: .5s;
-  &:hover{
-    transform: scale(1.1);
   }
 }
 
